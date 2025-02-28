@@ -20,6 +20,7 @@
     "@primevue/nuxt-module": "^4.0.0-beta.5",
     "@primevue/themes": "^4.0.0-beta.5",
     "@types/markdown-it": "^14.0.0",
+    "caniuse-lite": "^1.0.30001701",
     "markdown-it": "^14.1.0",
     "nuxt": "^3.11.2",
     "nuxt-auth-utils": "latest",

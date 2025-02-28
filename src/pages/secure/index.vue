@@ -348,7 +348,7 @@ function openTodoistHandler() {
   } else {
     window.open(current.url, 'todoist tab');
   }
-};
+}
 function notify(str: string) {
   if (!isMounted) {
     console.warn('Not mounted yet');
@@ -480,6 +480,13 @@ watch(isUltraFocus, () => {
 
 <template lang="pug">
 div(:class="isUltraFocus ? 'is-ultrafocus' : ''")
+  header.fl-py-m.fl-mb-l
+    .flex.justify-between.items-center
+      h1.is-display-4 Focus Mode
+      .flex.items-center.gap-4
+        NuxtLink.is-button.is-secondary(to="/secure/dashboard") Dashboard View
+        button.is-button.is-muted(@click="logoutHandler") Log Out
+        
   .duration-200.transition-all.fixed.inset-0(class="bg-black/75" :class="isOptionsOpen ? 'z-10 opacity-100' : 'z-[-1] opacity-0'")
   .z-20.duration-300.transition-transform.bg-white.fixed.top-0.left-0.right-0(:class="isOptionsOpen ? 'translate-y-0' : '-translate-y-full'" class="dark:bg-neutral-800")
     UIContainer.fl-py-xs
@@ -587,6 +594,7 @@ div(:class="isUltraFocus ? 'is-ultrafocus' : ''")
 
     footer
       TheFooter
+
 </template>
 
 <style>
